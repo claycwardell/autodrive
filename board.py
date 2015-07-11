@@ -53,7 +53,7 @@ def apply_moves_safely():
             for c in cars_involved:
                 c.next_move = consts.MOVE_NULL
 
-        # Otherwise, exactly one care should be allowed to pass
+        # Otherwise, exactly one car should be allowed to pass
         else:
             car_to_pass = random.choice(cars_involved)
             for c in cars_involved:
@@ -113,13 +113,8 @@ def attempt_spawn(pos, intended_next_move, draw_as):
         car.intended_next_move = intended_next_move
         total_cars.append(car)
 
-def main():
-    while True:
-        sleep(1)
-        simulation_step()
 
-if __name__ == "__main__":
-    main()
+
 
 
 
